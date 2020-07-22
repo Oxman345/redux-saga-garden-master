@@ -15,6 +15,12 @@ Before you get started, make sure you have the following software installed on y
 Create a new database called `garden` and create a `plant` table and add a few plants to your garden:
 
 ```SQL
+
+                                          'psql DB_Name < database_file.sql'
+3. Open terminal in this folder and run `psql garden < database.sql` to import the data.
+4. Hit `cmd r` in Positco and make sure the data import worked correctly.
+
+
 CREATE DATABASE "garden";
 
 CREATE TABLE "plant" (
@@ -51,10 +57,21 @@ VALUES ('Rose', 'Plantae', 'Angiosperms', 'Rosales', 'Rosaceae', 'Rosoideae', 'R
 
 ## Base Mode
 
-1. Add the `redux-logger` middleware to the project for debugging
-1. Add `redux-sagas` to the project to make an API request. The route `http://localhost:5000/api/plant` returns an array of plants. Display that array on the `Garden` component on load.
-1. Add all of the plant fields to the form to allow adding a new plant to the database. The server `post` route to do this is available at `http://localhost:5000/api/plant`.
-1. Add a `Delete` button for each plant to allow it to be removed from the database. The server `delete` route to do this is available at `http://localhost:5000/api/plant/1`,  for the plant with the `id` of `1`.
+1 x. Add the `redux-logger` middleware to the project for debugging
+1. 
+   Add `redux-sagas` to the project to make an API request. 
+        -import redux-sagas
+        -set up redux a bit in index
+
+   The route `http://localhost:5000/api/plant` returns an array of plants. 
+        -`/api/plant` for all of the routes
+        
+   Display that array on the `Garden` component on load.
+        - componentDidMount()
+
+
+2. Add all of the plant fields to the form to allow adding a new plant to the database. The server `post` route to do this is available at `http://localhost:5000/api/plant`.
+3. Add a `Delete` button for each plant to allow it to be removed from the database. The server `delete` route to do this is available at `http://localhost:5000/api/plant/1`,  for the plant with the `id` of `1`.
 
 ## Stretch Goals
 
